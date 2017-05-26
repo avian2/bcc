@@ -30,7 +30,7 @@ parser = argparse.ArgumentParser(
     description="Sniff SSL data",
     formatter_class=argparse.RawDescriptionHelpFormatter,
     epilog=examples)
-parser.add_argument("-p", "--pid", help="sniff this PID only.")
+parser.add_argument("-p", "--pid", help="sniff this PID only.", type=int)
 parser.add_argument("-c", "--comm",
                     help="sniff only commands matching string.")
 parser.add_argument("-o", "--no-openssl", action="store_false", dest="openssl",
